@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'routines/index'
+
+  get 'equipment/index'
+
   get 'sessions/create'
 
   get 'users/create'

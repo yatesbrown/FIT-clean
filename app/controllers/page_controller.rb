@@ -3,6 +3,12 @@ class PageController < ApplicationController
     @user = User.new
   end
 
+  def user_create
+    @user = User.new
+    if @user.save
+      redirect_to personalize_path
+    end
+  end
 
 private
   def user_params
