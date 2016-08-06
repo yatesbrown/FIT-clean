@@ -4,26 +4,71 @@
         <span id="title">F.I.T.</span>
     </div>
 
-    <div class="slider-container">
-      <div class="slider" id="homepage">
-        <div id="homepage-paragraph-container">
-          <h5 id="paragraph">F.I.T. stands for Functional Interval Training. It's a workout defined by alternating bursts of intense activity with periods of no- or low-intensity activity. Sign up and get F.I.T.!</h5>
-        </div>
-        <div id="homepage-button-container">
-          <div id="homepage-signup-button-container">
-            <button class="homepage-button" type="button" name="button">Sign up</button>
-          </div>
-          <div id="homepage-login-button-container">
-            <button class="homepage-button" type="button" name="button">Log in</button>
-          </div>
-        </div>
-      </div>
-      <div class="slider" id="sign-up-page">
+    <div class="slider">
+    <ul class="slides" id="ulid">
 
-      </div>
-      <div class="slider" id="login-page">
+      <li class="slide"><div id="child1">
+        <div class="homepage-paragraph-container">
+          <h4 id="paragraph">F.I.T. stands for Functional Inteveral Training. It is defined by alternating bursts of intense activity with periods of no- or low-intensity activity.</h4>
+        </div>
+        <div class="homepage-button-container">
+          <div id="space1"></div>
+          <button class="homepage-button" type="button" name="button" id="signup-button">Sign Up</button>
+          <div id="space2"></div>
+          <button class="homepage-button"type="button" name="button" id="login-button">Log In</button>
+        </div>
+      </div></li>
 
-      </div>
+      <li class="slide"><div id="child2">
+
+          <%= form_for(@user, remote: true, html: { :id => "regform" }) do |f| %>
+          <div class="reg-field-container">
+            <div class="field">
+                <%= f.text_field :name, placeholder: "Name", class: "input-field", id: "reg-field1" %>
+            </div>
+
+            <div class="field">
+              <div id="reg-email-error"></div>
+                <%= f.text_field :email, placeholder: "Email", class: "input-field", id: "reg-field2" %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password, placeholder: "Password", class: "input-field", id: "reg-field3" %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "input-field", id: "reg-field4" %>
+            </div>
+          </div>
+          <div class="reg-bottom-half-container">
+            <div class="space-above-reg-submit-button-container">
+              <h5 id="login-notice">Already have an account? <button id="login-link" type="button" name="button">Log In</button></h5>
+            </div>
+            <%= f.submit 'Sign Me Up!', id: "regsubmitbutton", class: "submitbutton" %>
+          <% end %>
+          </div>
+      </div></li>
+
+      <li class="slide"><div id="child3">
+        <%= form_tag "/login", method: "post", id: "loginform", remote: true do %>
+        <div class="login-field-container">
+          <div class="field"></div>
+          <div class="field">
+          <%= text_field_tag :email, nil, placeholder: "Email", class: "input-field", id: "login-field1" %></div>
+          <div class="field">
+          <%= password_field_tag :password, nil, class: "input-field",placeholder: "Password", id: "login-field2" %></div>
+          <div class="field"></div>
+        </div>
+        <div class="space-below-login-fields">
+          <div class="space-above-login-submit">
+            <h5 id="signup-notice">Don't have an account? <button id="signup-link" type="button" name="button">Sign Up</button></h5>
+          </div>
+        <%= submit_tag "Login", id: "loginsubmitbutton", onclick: "this.disabled = false", class: "submitbutton" %>
+        <% end %>
+        </div>
+      </div></li>
+
+    </ul>
     </div>
 
 </div>

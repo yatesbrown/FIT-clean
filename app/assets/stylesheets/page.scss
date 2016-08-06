@@ -27,86 +27,226 @@ body{
   color: #000000;
   font-family: Arial;
 }
-.slider-container{
-  width: 100%;
+.slider{
+  width: 100vw;
   height: 77vh;
   padding: 0;
   margin: 0;
-  // display: inline;
   overflow: hidden;
 }
-.slider{
+
+.slider .slides {
+  display: block;
+  width: 300vw;
+  height: 77vh;
+  margin: 0;
+  padding:0;
+}
+.slider .slide{
+  float: left;
+  list-style-type: none;
+  height: 77vh;
+  width: 100vw;
+}
+#child1{
+  width: 100%;
+  height: 100%;
+}
+#child2{
   height: 100%;
   width: 100%;
+}
+#child3{
+  width: 100%;
+  height: 100%;
+}
+.homepage-paragraph-container{
   margin: 0;
   padding: 0;
   border: 0;
-}
-#homepage{
-  display: block;
-}
-#homepage-paragraph-container{
-  margin: 0;
-  padding: 0;
-  height: 55%;
-  width: 100%;
+  height: 60%;
+  width: 100vw;
   align-items: center;
   display: flex;
   justify-content: center;
-  // background-color: blue;
 }
 #paragraph{
-  color: #4F4F4F;
-  font-family: Arial;
-  margin: 0;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
-  font-size: 3vh;
   text-align: center;
+  font-family: Arial;
+  color: #5C6370;
+  font-size: 4vh;
 }
-#homepage-button-container{
+.homepage-button-container{
+  width: 100vw;
+  height: 40%;
+  display: block;
+  // background-color: blue;
+}
+.homepage-button{
+  border-radius: 10px;
+  background-color: #56F5A8;
+  width: 80vw;
+  height: 26%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border: none;
+  color: #FFFFFF;
+}
+.homepage-button:focus{
+  border: none;
+  outline: none;
+}
+#space1{
+  height: 12%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  height: 45%;
+}
+#space2{
+  height: 24%;
   width: 100%;
-  // background-color: grey;
+  margin: 0;
+  padding: 0;
+}
+#regform{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 77vh;
+}
+.reg-field-container{
+  width: 100vw;
+  height: 58%;
   display: block;
 }
-#homepage-signup-button-container{
-  height: 50%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.field{
+  height: 25%;
+  width: 100vw;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-#homepage-login-button-container{
-  height: 50%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.input-field{
+  font-family: Arial;
+  font-size: 2vh;
+  color: #737373;
+  width: 85vw;
+  height: 60%;
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+}
+.input-field:focus{
+  outline: none;
+  font-family: Arial;
+  font-size: 2vh;
+  color: #737373;
+  width: 85vw;
+  height: 60%;
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+}
+.reg-bottom-half-container{
+  width: 100vw;
+  height: 42%;
+}
+.space-above-reg-submit-button-container{
+  width: 100vw;
+  height: 70%;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-#signup-button{
-  margin: 0;
-  width: 80vw;
-  height: 50%;
-  border-radius: 10px;
-  background-color: #56F5A8;
-  color: #FFFFFF;
+.submitbutton{
   font-size: 3vh;
   font-family: Arial;
+  color: #FFFFFF;
+  width: 100vw;
+  height: 30%;
+  background-color: #56F5A8;
   border: none;
 }
-#login-button{
-  margin: 0;
-  width: 80vw;
-  height: 50%;
-  border-radius: 10px;
-  background-color: #56F5A8;
+.submitbutton:focus{
   color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+#login-notice{
   font-size: 3vh;
   font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+#login-link{
+  color: blue;
+  font-family: Arial;
+  font-size: 3vh;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+#login-link:focus{
+  font-family: Arial;
+  font-size: 3vh;
+  color: blue;
+  outline: none;
+  border: none;
+  background-color: #FFFFFF;
+}
+#loginform{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 77vh;
+}
+.login-field-container{
+  width: 100vw;
+  height: 58%;
+  display: block;
+}
+.space-below-login-fields{
+  width: 100vw;
+  height: 42%;
+}
+.space-above-login-submit{
+  width: 100vw;
+  height: 70%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#signup-notice{
+  font-size: 3vh;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+#signup-link{
+  color: blue;
+  font-family: Arial;
+  font-size: 3vh;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+#signup-link:focus{
+  font-family: Arial;
+  font-size: 3vh;
+  color: blue;
+  outline: none;
+  border: none;
+  background-color: #FFFFFF;
+}
+#reg-email-error{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 2vh;
+  color: red;
 }

@@ -4,5 +4,6 @@ class MuscleGroup < ApplicationRecord
   has_many :passive_relationships, class_name:  "MuscleGroupExercise",
                                   foreign_key: "muscle_group_id",
                                   dependent:   :destroy
-  has_many :exercises, through: :passive_relationships, source: :exercise
+  has_many :muscle_group_exercises
+  has_many :exercises, through: :muscle_group_exercises, source: :exercise
 end
