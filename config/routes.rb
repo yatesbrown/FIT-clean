@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/personalize' => 'users#personalize'
   post '/personalize' => 'users#personalized'
-  post '/equipment' => 'users#equipment'
+  get '/equipment' => 'users#equipment'
+  post '/equipment' => 'users#equipmentd'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

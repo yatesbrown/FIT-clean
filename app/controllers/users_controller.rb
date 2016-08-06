@@ -18,6 +18,14 @@ class UsersController < ApplicationController
     @user.save!
     redirect_to equipment_path
   end
+
+  def equipment
+    
+  end
+
+  def equipmentd
+
+  end
 private
 
   def user_params
