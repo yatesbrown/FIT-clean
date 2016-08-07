@@ -14,6 +14,7 @@
         <div class="circle" id="circle7"><img class="equip-img" src="https://s3.amazonaws.com/fit-pngs/Medicine+Ball.png" alt="Picture of a Medicine Ball" id="medball-img"/></div><div class="circle" id="circle8"><img class="equip-img" src="https://s3.amazonaws.com/fit-pngs/Bike.png" alt="Picture of a Bike" id="bike-img"/></div><div class="circle" id="circle9"><img src="https://s3.amazonaws.com/fit-pngs/Bands+.png" alt="Picture of bands" id="bands-img" class="equip-img"/></div>
       </div>
     </div>
-    <button type="button" name="button" id="equipment-submit-button">Let's do this!</button>
+    <%= button_to "Let's do this!", dashboard_path, id: 'equipment-submit-button', method: 'get' %>
+    <!-- <button type="button" name="button" id="equipment-submit-button">Let's do this!</button> -->
   </div>
 </div>
