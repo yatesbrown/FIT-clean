@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-  get 'routines/index'
 
-  get 'equipment/index'
-
-  get 'sessions/create'
-
-  get 'users/create'
-
+  get '/routines/index' => 'routines#index'
   root 'page#homepage'
-  post '/users' => 'users#create'
+  post '/users' => 'page#user_create'
   post '/login' => 'sessions#create'
 
-  
+  get '/personalize' => 'users#personalize'
+  post '/personalize' => 'users#personalized'
+  get '/equipment' => 'users#equipment'
+  post '/equipment' => 'users#equipmentd'
+
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

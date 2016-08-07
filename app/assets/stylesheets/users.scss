@@ -1,3 +1,491 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.personalize-main-container{
+  height: 100vh;
+  width: 100vw;
+}
+.top-container{
+  width: 100vw;
+  height: 18vh;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#hello-user{
+  margin: 0;
+  padding: 0;
+  margin-right: 4vw;
+  margin-left: 4vw;
+  font-family: Arial;
+  font-size: 3vh;
+  color: #000000;
+}
+.under-top-container{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 10vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#get-personalized{
+  font-family: Arial;
+  font-size: 2vh;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  position: relative;
+  bottom: 2vh;
+}
+.bottom-container{
+  width: 100vw;
+  height: 72vh;
+  display: block;
+}
+#personalize-form{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  // margin-top: 4vh;
+}
+.gender-container{
+  width: 80vw;
+  height: 20%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  // background-color: #D9D9D9;
+}
+#gender{
+  width: 100%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 3vh;
+  color: #7D7D7D;
+}
+.gender-check-box-container{
+  width: 100%;
+  height: 75%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.inner-gender-check-box-container{
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.male-check-box{
+  width: 15%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#male-span{
+  font-size: 4vh;
+  text-align: center;
+  font-family: Arial;
+  width: 35%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+}
+.female-check-box{
+  width: 15%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#female-span{
+  font-size: 4vh;
+  text-align: center;
+  font-family: Arial;
+  width: 35%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+}
+.age-container{
+  width: 80vw;
+  height: 20%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+#age{
+  width: 100%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 3vh;
+  color: #7D7D7D;
+}
+.age-field-container{
+  width: 100%;
+  height: 75%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#age-field{
+  font-family: Arial;
+  font-size: 2vh;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+}
+#age-field:focus{
+  outline: none;
+  font-family: Arial;
+  font-size: 2vh;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+}
+.height-container{
+  width: 80vw;
+  height: 20%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+#height{
+  width: 100%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 3vh;
+  color: #7D7D7D;
+}
+.height-field-container{
+  width: 100%;
+  height: 75%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.height-inner-field-container{
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+#height-ft-field{
+  font-family: Arial;
+  font-size: 2vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+}
+#height-ft-field:focus{
+  font-family: Arial;
+  font-size: 2vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+  outline: none;
+}
+#height-in-field{
+  font-family: Arial;
+  font-size: 2vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+}
+#height-in-field:focus{
+  font-family: Arial;
+  font-size: 2vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+  outline: none;
+}
+.weight-container{
+  width: 80vw;
+  height: 20%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+#weight{
+  width: 100%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  font-size: 3vh;
+  color: #7D7D7D;
+}
+.weight-field-container{
+  width: 100%;
+  height: 75%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#weight-lbs-field{
+  font-family: Arial;
+  font-size: 2vh;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+}
+#weight-lbs-field:focus{
+  font-family: Arial;
+  font-size: 2vh;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  border: 0;
+  border-bottom: 2px solid #7D7D7D;
+  outline: none;
+}
+.spacerr{
+  width: 100vw;
+  height: 5%;
+}
+#personalize-submit{
+  height: 15%;
+  width: 100vw;
+  font-size: 4vh;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  background-color: #56F5A8;
+  border: none;
+  color: #FFFFFF;
+
+}
+#personalize-submit:focus{
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+}
+.equipment-main-container{
+  width: 100vw;
+  height: 100vh;
+}
+.equipment-question-container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 22vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.bottom-half-equipment{
+  margin: 0;
+  padding: 0;
+  height: 78vh;
+  width: 100%;
+}
+#equipment-question{
+  color: #000000;
+  font-family: Arial;
+  font-size: 3vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.equipment-content-container{
+  width: 100vw;
+  height: 67vh;
+}
+#equipment-submit-button{
+  width: 100%;
+  height: 11vh;
+  background-color: #56F5A8;
+  border: none;
+  outline: none;
+  font-size: 4vh;
+  font-family: Arial;
+  color: #FFFFFF;
+}
+#equipment-submit-button:focus{
+  width: 100%;
+  height: 11vh;
+  background-color: #56F5A8;
+  border: none;
+  outline: none;
+}
+.row-container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 22vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.row-3-container{
+  margin-bottom: 1vh;
+}
+.circle{
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  width: 14vh;
+  height: 14vh;
+  border: 2px solid #000000;
+}
+#circle1{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#dumbbell-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle2{
+  margin-left: 2vh;
+  margin-right: 2vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#jumprope-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle3{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#mat-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle4{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#kettlebell-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle5{
+  margin-left: 2vh;
+  margin-right: 2vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#treadmill-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle6{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#barbell-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle7{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#medball-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle8{
+  margin-left: 2vh;
+  margin-right: 2vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#bike-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}
+#circle9{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#bands-img{
+  width: 9vh;
+  height: 9vh;
+  margin: 0;
+  padding: 0;
+}

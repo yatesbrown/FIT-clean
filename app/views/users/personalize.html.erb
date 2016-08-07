@@ -1,0 +1,46 @@
+<div class="personalize-main-container">
+  <div class="top-container">
+    <h3 id="hello-user">Hey <%=@user.name%>, ready to get F.I.T?</h3>
+  </div>
+  <div class="under-top-container">
+    <h5 id="get-personalized">Let's get to know you a little better. Fill out the fields below.</h5>
+  </div>
+  <div class="bottom-container">
+    <%= form_tag "/personalize", method: "post", id: "personalize-form", remote: true do %>
+    <div class="gender-container">
+      <h2 id="gender">Gender</h2>
+      <div class="gender-check-box-container">
+        <div class="inner-gender-check-box-container">
+          <%=check_box_tag :male, "1", false, class: "male-check-box"%><span id="male-span">Male</span>
+          <%=check_box_tag :female, "1", false, class: "female-check-box"%><span id="female-span">Female</span>
+        </div>
+      </div>
+    </div>
+    <div class="age-container">
+      <h2 id="age">Age</h2>
+      <div class="age-field-container">
+        <%= text_field_tag :age, nil, placeholder: "e.g. 23", class: "age-input", id: "age-field" %>
+      </div>
+    </div>
+    <div class="height-container">
+      <h2 id="height">Height</h2>
+      <div class="height-field-container">
+        <div class="height-inner-field-container">
+          <%= text_field_tag :height_ft, nil, placeholder: "ft", class: "height-ft-input", id: "height-ft-field" %>
+          <%= text_field_tag :height_in, nil, placeholder: "in", class: "height-in-input", id: "height-in-field" %>
+        </div>
+      </div>
+    </div>
+    <div class="weight-container">
+      <h2 id="weight">Weight</h2>
+      <div class="weight-field-container">
+        <%= text_field_tag :weight_in_lbs, nil, placeholder: "Lbs", class: "weight-lbs-input", id: "weight-lbs-field" %>
+      </div>
+    </div>
+    <div class="spacerr"></div>
+    <%= submit_tag "Yup that's me", class: "personalize-submitbutton", id: "personalize-submit"%>
+    <%end%>
+  </div>
+
+
+</div>
