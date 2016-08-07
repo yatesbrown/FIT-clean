@@ -13,46 +13,76 @@ class Routine < ApplicationRecord
       end
     end
   end
-
   def warmup
    ex_warmup_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(6) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..1]
+   ex_warmup_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..1]
   end
  ####################################################################################################################
-  def shoulder_and_legs_exercises
-   ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(1) || MuscleGroup.find(2) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..2]
+  def shoulder_and_legs_exercises(diff)
+   ex_core_all = exercises.shuffle.select { |ex| ex.muscle_groups.include?(MuscleGroup.find(1) || MuscleGroup.find(2)) }
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
   end
-
-  def legs_and_arms
-   ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(2) || MuscleGroup.find(3) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..2]
+  def legs_and_arms(diff)
+   ex_core_all = exercises.shuffle.select { |ex| ex.muscle_groups.include? MuscleGroup.find(2) || MuscleGroup.find(3) }
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
   end
-
-  def chest_and_shoulders
+  def chest_and_shoulders(diff)
    ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(1) || MuscleGroup.find(4) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..2]
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
   end
-
-  def chest_and_arms
+  def chest_and_arms(diff)
    ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(4) || MuscleGroup.find(3) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..2]
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
   end
-
-  def back_and_shoulders
+  def back_and_shoulders(diff)
    ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(1) || MuscleGroup.find(7) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..2]
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
   end
-
-  def back_and_arms
+  def back_and_arms(diff)
    ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(7) || MuscleGroup.find(3) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..2]
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
   end
+ ####################################################################################################################
+ def cardio_exercises
+   ex_cardio_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(8) }
+   ex_cardio_all.sort
+ end
 
  ####################################################################################################################
-  def core_exercises
-   ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(5) }
-   ex_core_all.sort { |a, b| b.difficulty <=> a.difficulty }[0..3]
-  end
 
+  def core_exercises(diff)
+   ex_core_all = exercises.select { |ex| ex.muscle_groups.include? MuscleGroup.find(5) }
+   ex_core_all.select! { |ex| ex.difficulty == diff }
+   ex_core_all.sample
+  end
+  # Generate routine
+  def self.generate_legs_and_shoulders_set
+    l_and_s = Routine.first
+    @routine = []
+    @routine.push(l_and_s.warmup).flatten!
+
+
+    @routine.push(l_and_s.shoulder_and_legs_exercises(2))
+    @routine.push(l_and_s.shoulder_and_legs_exercises(2))
+    @routine.push(l_and_s.shoulder_and_legs_exercises(1))
+
+    @routine.push(l_and_s.cardio_exercises).flatten!
+
+    @routine.push(l_and_s.shoulder_and_legs_exercises(2))
+    @routine.push(l_and_s.shoulder_and_legs_exercises(2))
+    @routine.push(l_and_s.shoulder_and_legs_exercises(1))
+
+    @routine.push(l_and_s.cardio_exercises).flatten!
+
+    @routine.push(l_and_s.core_exercises(1))
+    @routine.push(l_and_s.core_exercises(2))
+    @routine.push(l_and_s.core_exercises(1))
+    @routine.push(l_and_s.core_exercises(2))
+  end
 end
