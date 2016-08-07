@@ -9,7 +9,7 @@ class PageController < ApplicationController
       session[:user_id] = @user.id
       redirect_to personalize_path
     else
-      render js: "alert('Oops something went wrong, try again with a different email');"
+      render js: "alert('Oops something went wrong');"
     end
   end
 
