@@ -3,7 +3,8 @@
 <div class="main-dashboard-container">
 
   <div class="top-nav-bar-container">
-    <img src="https://s3.amazonaws.com/fit-pngs/Profile_icon.png" id="profile-icon" alt="Picture of Profile Icon" />
+    <%= link_to image_tag("https://s3.amazonaws.com/fit-pngs/Profile_icon.png", :style => 'height: 8vh; margin-right: 1vh;', id: "profile-icon"), settings_path%>
+    <!-- <img src="https://s3.amazonaws.com/fit-pngs/Profile_icon.png" id="profile-icon" alt="Picture of Profile Icon" /> -->
   </div>
 
   <div class="greeting-container">
@@ -12,9 +13,11 @@
   <div class="last-workouts-container">
     <div class="smaller-inner-div"><div id="last-workouts-h6-container"><h6 id="last-workouts">Last workouts</h6></div></div>
     <div class="bigger-inner-div" id="column-header-container"><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Routine</h6></div><div class="column-header"><h6 class="header-content">Time</h6></div></div>
-    <div class="bigger-inner-div"></div>
-    <div class="bigger-inner-div"></div>
-    <div class="bigger-inner-div"></div>
+    <div class="bigger-inner-div"><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Date</h6></div></div>
+    <div class="bigger-inner-div"><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Date</h6></div></div>
+    <div class="bigger-inner-div"><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Date</h6></div><div class="column-header"><h6 class="header-content">Date</h6></div></div>
   </div>
-
+  <div class="start-workout-button-container">
+    <img id="start-workout-button" src="https://s3.amazonaws.com/fit-pngs/Put+in+Work+button.png" alt="Start workout icon" />
+  </div>
 </div>

@@ -4,23 +4,23 @@ class UsersController < ApplicationController
   end
   def personalized
     @user = current_user
-    @user.weight = params[:weight_in_lbs].to_i
-    @user.age = params[:age].to_i
-      # if params[:male] == true
-      #   @user.gender = "male"
-      # elsif params[:female] == true
-      #   @user.gender = "female"
-      # else
-      #   @user.gender = "undefined"
-      # end
-    @user.height_ft = params[:height_ft].to_i
-    @user.height_in = params[:height_in].to_i
+    @user.weight = params[:weight_in_lbs]
+    @user.age = params[:age]
+      if params[:male] == "1"
+        @user.gender = "male"
+      elsif params[:female] == "1"
+        @user.gender = "female"
+      else
+        @user.gender = "undefined"
+      end
+    @user.height_ft = params[:height_ft]
+    @user.height_in = params[:height_in]
     @user.save!
     redirect_to equipment_path
   end
 
   def equipment
-    
+
   end
 
   def equipmentd

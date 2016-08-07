@@ -21,13 +21,13 @@ body{
   display: flex;
   justify-content: flex-end;
 }
-#profile-icon{
-  margin: 0;
-  padding: 0;
-  height: 80%;
-  margin-right: 1vh;
-  // float: right;
-}
+// #profile-icon{
+//   margin: 0;
+//   padding: 0;
+//   height: 80%;
+//   margin-right: 1vh;
+//   // float: right;
+// }
 
 
 .greeting-container{
@@ -52,7 +52,7 @@ body{
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
-  height: 35vh;
+  height: 35%;
   background-color: #F4F4F4;
 }
 .bigger-inner-div{
@@ -108,4 +108,18 @@ body{
   font-family: 'Montserrat';
   color: #5B6578;
   font-size: 3vh;
+}
+.start-workout-button-container{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 45%;
+  // background-color: blue;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#start-workout-button{
+  height: 72vw;
+  width: 72vw;
 }
