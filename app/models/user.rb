@@ -4,4 +4,12 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :email, presence: true
   validates :name, presence: true
+
+  def male?
+    self.gender == "male"
+  end
+
+  def female?
+    self.gender == "female"
+  end
 end

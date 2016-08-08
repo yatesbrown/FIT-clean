@@ -1,1 +1,40 @@
-<h1>settings page</h1>
+<div class="settings-main-container">
+  <%= button_to "Back", dashboard_path, id: 'settings-back-button', method: 'get' %>
+
+  <div class="middle-settings-container">
+      <%= form_tag "/update", method: "post", id: "update-personal-form", remote: true do %>
+        <div class="jus-a-lil-space-yo"></div>
+        <div class="settings-name-container">
+          <div class="inner-inner-setting-container"><span id="name-settings-span">Name:</span></div> <%= text_field_tag :name, nil, placeholder: @user.name, class: "name-input-settings-field", id: "name-field-settings" %>
+        </div>
+        <div class="settings-gender-container">
+          <div class="gender-inner-inner-container">
+            <%= check_box_tag :male, "1", @user.male?, class: "male-check-box-settings"%><span id="male-check-box-span">Male</span>
+          </div>
+          <div class="gender-inner-inner-container">
+            <%= check_box_tag :female,  "1", @user.female?, class: "female-check-box-settings"%><span id="female-check-box-span">Female</span>
+          </div>
+        </div>
+        <div class="settings-age-container">
+          <div class="inner-inner-setting-container"><span id="age-setting-span">Age:</span></div> <%= text_field_tag :age, nil, placeholder: @user.age, class: "age-input-settings-field", id: "age-field-settings" %>
+        </div>
+        <div class="settings-height-input-container">
+          <div class="inner-inner-setting-container"><span id="setting-height-span">Height:</span></div>
+          <div class="inner-right-height-container">
+            <%= text_field_tag :height_ft, nil, placeholder: @user.height_ft, class: "height-ft-input-settings-field", id: "height-ft-field-settings" %><span id="setting-feet-span">ft</span>
+            <%= text_field_tag :height_in, nil, placeholder: @user.height_in, class: "height-in-input-settings-field", id: "height-in-field-settings" %> <span id="setting-inches-span">in</span>
+          </div>
+        </div>
+        <div class="settings-weight-input-container">
+          <div class="inner-inner-setting-container"><span id="setting-weight-span">Weight:</span></div> <%= text_field_tag :weight, nil, placeholder: @user.weight, class: "weight-input-settings-field", id: "weight-field-settings" %>
+        </div>
+        <div class="setting-update-submit-button-container">
+          <%= submit_tag "Update", class: "settings-update-submit-button", id: "update-submit-button" %>
+        </div>
+      <%end%>
+  </div>
+
+
+
+  <%= button_to "Logout", logout_path, id: 'logout-button', method: 'get' %>
+</div>

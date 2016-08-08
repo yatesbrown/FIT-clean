@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post '/equipment' => 'users#equipmentd'
   get '/dashboard' => 'dashboard#dashboard', as: 'dashboard'
   get '/settings' => 'dashboard#settings'
-
+  get '/logout' => 'sessions#destroy'
+  post '/update' => 'users#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
